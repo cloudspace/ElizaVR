@@ -1,0 +1,3 @@
+[submodule "Salsa"]
+	path = Assets/Crazy Minnow Studio
+	url = git@github.com:cloudspace/SalsaWithRandomEyes.git
