@@ -151,7 +151,6 @@ namespace Cloudspace
 			yield return new WaitUntil (() => source.clip.length - source.time < .25);
 			yield return new WaitForSeconds (.75f);
 			source.clip = null;
-			yield break;
 			NotificationCenter.DefaultCenter ().PostNotification (this, "OnStartListening");
 		}
 
