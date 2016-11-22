@@ -140,7 +140,7 @@ namespace IBM.Watson.DeveloperCloud.Widgets
         protected override void Start()
 	    {
             base.Start();
-
+			Active = true;
 	        if ( m_StatusText != null )
 	            m_StatusText.text = "READY";
             if (! m_SpeechToText.GetModels( OnGetModels ) )
