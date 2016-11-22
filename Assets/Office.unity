@@ -520,6 +520,34 @@ Light:
   m_BounceIntensity: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &96881629
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 96881630}
+  m_Layer: 0
+  m_Name: HeadPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &96881630
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 96881629}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.3, y: 1.6, z: -0.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
 --- !u!1 &314674998
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,7 +562,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &314674999
 Transform:
   m_ObjectHideFlags: 0
@@ -779,6 +807,34 @@ Light:
   m_BounceIntensity: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &691365255
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 691365256}
+  m_Layer: 0
+  m_Name: EyePos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &691365256
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 691365255}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.3, y: 0.6, z: -0.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
 --- !u!1 &709821406
 GameObject:
   m_ObjectHideFlags: 0
@@ -2681,9 +2737,68 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0.25100002
       objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 1342aa655fd4a4014a5fe087319133f7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 1342aa655fd4a4014a5fe087319133f7, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: c32629cae38924d0582fa4d2758d997e, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1342aa655fd4a4014a5fe087319133f7, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &1089152274 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100004, guid: 1342aa655fd4a4014a5fe087319133f7, type: 3}
+  m_PrefabInternal: {fileID: 1089152273}
+--- !u!114 &1089152275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1089152274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee0e82b50d494bf7b517f412755ad1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookIKWeight: 1
+  bodyWeight: 0
+  headWeight: 1
+  eyesWeight: 0
+  clampWeight: 1
+  actionInProgress: 0
+  leanBack: 0
+  leanForward: 0
+  sitStraight: 0
+  lookLeft: 0
+  lookRight: 0
+  lookUp: 0
+  lookDown: 0
+  lookUpLeft: 0
+  lookUpRight: 0
+  lookDownLeft: 0
+  lookDownRight: 0
+  lookStraight: 0
+  headBack: 0
+  headForward: 0
+  eyesLeft: 0
+  eyesRight: 0
+  eyesUp: 0
+  eyesDown: 0
+  eyesUpLeft: 0
+  eyesUpRight: 0
+  eyesDownLeft: 0
+  eyesDownRight: 0
+  eyesStraight: 0
+  eyesAtMouth: 0
+  eyesOverLeft: 0
+  eyesOverRight: 0
+  nodHead: 0
+  shakeHead: 0
+  lookPos: {fileID: 96881630}
+  eyePos: {fileID: 691365256}
 --- !u!1 &1096232938
 GameObject:
   m_ObjectHideFlags: 0
@@ -3144,7 +3259,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1923253323
 Transform:
   m_ObjectHideFlags: 0
