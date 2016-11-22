@@ -199,7 +199,7 @@ public class CharacterHandler : MonoBehaviour {
 
 	public void ReturnEyesToIdle(){
 		eyesStraight = true;
-		eyePos.transform.position = new Vector3 (0.0f, -1.47f, -29.5f);
+		eyePos.transform.position = new Vector3 (-1.3f, 0.6f, -0.7f);
 	}
 
 	void LookTowards (Vector3 lookVector, int speedMulti) {
@@ -553,83 +553,83 @@ public class CharacterHandler : MonoBehaviour {
 	}
 
 	public Vector3 LookLeftVec() {
-		return new Vector3 (0.0f, 0.0f, -20.0f);
+		return new Vector3 (-1.3f, 0.6f, -5.0f);
 	}
 
 	public Vector3 LookRightVec() {
-		return new Vector3 (0.0f, 0.0f, -40.0f);
+		return new Vector3 (-6.0f, 0.6f, -0.7f);
 	}
 
 	public Vector3 LookUpVec() {
-		return new Vector3 (0.0f, 3.0f, -29.5f);
+		return new Vector3 (-1.3f, 4.0f, -0.7f);
 	}
 
 	public Vector3 LookDownVec() {
-		return new Vector3 (0.0f, -3.0f, -29.5f);
+		return new Vector3 (-1.3f, -4.0f, -0.7f);
 	}
 
 	public Vector3 LookUpLeftVec() {
-		return new Vector3 (0.0f, 4.0f, -20.0f);
+		return new Vector3 (1.3f, 4.0f, -5.0f);
 	}
 
 	public Vector3 LookUpRightVec() {
-		return new Vector3 (0.0f, 4.0f, -40.0f);
+		return new Vector3 (-6.0f, 4.0f, -0.7f);
 	}
 
 	public Vector3 LookDownLeftVec() {
-		return new Vector3 (0.0f, -3.0f, -20.0f);
+		return new Vector3 (1.3f, -4.0f, -5.0f);
 	}
 
 	public Vector3 LookDownRightVec() {
-		return new Vector3 (0.0f, -3.0f, -40.0f);
+		return new Vector3 (-6.0f, -4.0f, -0.7f);
 	}
 
 	public Vector3 LookStraightVec() {
-		return new Vector3 (0.0f, 0.0f, -29.5f);
+		return new Vector3 (-1.3f, 0.6f, -0.7f);
 	}
 
 	public Vector3 HeadBackVec() {
-		return new Vector3 (0.0f, 1.5f, -29.5f);
+		return new Vector3 (-1.3f, 4.0f, -0.7f);
 	}
 
 	public Vector3 HeadForwardVec() {
-		return new Vector3 (0.0f, -1.2f, -29.5f);
+		return new Vector3 (-1.3f, 0.6f, -0.7f);
 	}
 
 	public Vector3 NodVec() {
-		return new Vector3 (0.0f, -2.0f, -29.5f);
+		return new Vector3 (-1.3f, -1.0f, -0.7f);
 	}
 
 	public Vector3 ShakeLeftVec() {
-		return new Vector3 (0.0f, 0.0f, -27.0f);
+		return new Vector3 (-1.3f, 0.6f, -2.0f);
 	}
 
 	public Vector3 ShakeRightVec() {
-		return new Vector3 (0.0f, 0.0f, -31.0f);
+		return new Vector3 (-3.0f, 0.6f, -0.7f);
 	}
 
 	public Vector3 LeanBackVec() {
-		return new Vector3 (0.0f, 0.8f, -29.5f);
+		return new Vector3 (-1.3f, 2.0f, -0.7f);
 	}
 
 	public Vector3 LeanForwardVec() {
-		return new Vector3 (0.0f, -1.0f, -29.5f);
+		return new Vector3 (-1.3f, -3.0f, -0.7f);
 	}
 
 	public Vector3 EyesStraightVec() {
-		return new Vector3 (0.0f, -1.47f, -29.5f);
+		return new Vector3 (-1.3f, 0.6f, -0.7f);
 	}
 
 	public Vector3 EyesMouthVec() {
-		return new Vector3 (0.0f, -2.5f, -29.5f);
+		return new Vector3 (-1.3f, -1.0f, -0.7f);
 	}
 
 	public Vector3 EyesOverLeftVec() {
-		return new Vector3 (0.0f, -1.47f, -28.3f);
+		return new Vector3 (-1.3f, 0.6f, -2.0f);
 	}
 
 	public Vector3 EyesOverRightVec() {
-		return new Vector3 (0.0f, -1.47f, -31.3f);
+		return new Vector3 (-3.0f, 0.6f, -0.7f);
 	}
 
 	public void IncreaseBodyWeight(){
