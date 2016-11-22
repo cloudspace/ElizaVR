@@ -33,6 +33,6 @@ https://github.com/watson-developer-cloud/unity-sdk#configuring-your-service-cre
 
 3) Install the "Salsa Text-to-Speech" plugin from the Asset Store.
 
-4) We have two cameras in the app - one for building Cardboard builds named "Cardboard" and one named "Gear" for the GearVR build.  In the Unity Inspector, show the camera that matches the build output you wish to build for, and hide the other.
+4) There are two cameras in the app - one for building Cardboard builds named "Cardboard" and one named "Gear" for the GearVR build.  In the Unity Inspector, show the camera that matches the build output you wish to build for, and deactivate the other.  Make sure that only one camera is active at a time.
 
 5)  If you wish to build for Gear VR, make sure that "Virtual Reality Support" is checked under the Player Settings.  If not, make sure that it is not checked.
