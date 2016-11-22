@@ -1,5 +1,7 @@
 # Eliza VR Unity Engine
 
+This is a virtual reality instance of the classic "Eliza" AI therapist engine written with [Unity](http://unity.com) to run on either Google Cardboard or GearVR.
+
 ## Plugins Used
 
 ### [The Watson Unity SDK](https://github.com/watson-developer-cloud/unity-sdk) 
@@ -21,3 +23,16 @@ This was ported to 2.0 and included in this project to act as the AI.
 ### [MsgPack](https://github.com/msgpack/msgpack-cli)
 
 Used to cache a compiled copy of the rive script on the client's machine (for use with larger rive scripts)
+
+## Steps to build:
+
+1) Register for your service credentials, as described here: 
+https://github.com/watson-developer-cloud/unity-sdk#configuring-your-service-credentials
+
+2) Install the "Realistic Eye Movements" plugin from the Unity Asset Store
+
+3) Install the "Salsa Text-to-Speech" plugin from the Asset Store.
+
+4) We have two cameras in the app - one for building Cardboard builds named "Cardboard" and one named "Gear" for the GearVR build.  In the Unity Inspector, show the camera that matches the build output you wish to build for, and hide the other.
+
+5)  If you wish to build for Gear VR, make sure that "Virtual Reality Support" is checked under the Player Settings.  If not, make sure that it is not checked.
