@@ -126,7 +126,7 @@ namespace Cloudspace
 			Debug.Log (System.DateTime.Now.ToString ("yyyy-MM-dd HH:mm:ss.fff") + " Bot Answers: " + reply);
 
 			//			Debug.Log("Got chatbot reply in "+ System.DateTime.Now.Subtract(starttime).TotalSeconds + " seconds");
-			//NotificationCenter.DefaultCenter ().PostNotification (this, "OnText", reply);
+			NotificationCenter.DefaultCenter ().PostNotification (this, "OnSaveDialog", new KeyValuePair<string, string>(response, reply));
 			TextToSpeech(reply);		
 		}
 
