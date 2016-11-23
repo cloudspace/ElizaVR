@@ -3299,7 +3299,7 @@ MonoBehaviour:
   isTalking: 0
   prevIsTalking: 0
   broadcast: 0
-  broadcastReceiversCount: 1
+  broadcastReceiversCount: 0
   expandBroadcast: 0
   broadcastReceivers: []
   propagateToChildren: 0
@@ -3395,7 +3395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 525a624e4b9004142be066c74b42ec4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  salsa3D: {fileID: 0}
+  salsa3D: {fileID: 1089152276}
   randomEyes3D: {fileID: 0}
   body: {fileID: 370171937}
   eyelashes: {fileID: 2035323289}
@@ -3512,10 +3512,207 @@ MonoBehaviour:
   - Facial_Blends.UpperLipUp_Left
   - Facial_Blends.UpperLipUp_Right
   initialize: 0
+--- !u!114 &1089152279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1089152274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0359b2b84d8484d2281221cfda5470e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  headSpeedModifier: 1
+  headWeight: 1
+  headBoneNonMecanimXform: {fileID: 0}
+  useMicroSaccades: 1
+  useMacroSaccades: 1
+  kDrawSightlinesInEditor: 0
+  controlData:
+    eyeControl: 0
+    leftEye: {fileID: 0}
+    rightEye: {fileID: 0}
+    maxEyeUpBoneAngle: 20
+    maxEyeDownBoneAngle: 20
+    maxEyeUpEyeballAngle: 20
+    maxEyeDownEyeballAngle: 20
+    isEyeBallDefaultSet: 0
+    isEyeBoneDefaultSet: 0
+    isEyeBallLookUpSet: 0
+    isEyeBoneLookUpSet: 0
+    isEyeBallLookDownSet: 0
+    isEyeBoneLookDownSet: 0
+    leftBoneEyeRotationLimiter:
+      transform: {fileID: 0}
+      defaultQ: {x: 0, y: 0, z: 0, w: 0}
+      lookUpQ: {x: 0, y: 0, z: 0, w: 0}
+      lookDownQ: {x: 0, y: 0, z: 0, w: 0}
+      maxUpAngle: 0
+      maxDownAngle: 0
+      isLookUpSet: 0
+      isLookDownSet: 0
+    rightBoneEyeRotationLimiter:
+      transform: {fileID: 0}
+      defaultQ: {x: 0, y: 0, z: 0, w: 0}
+      lookUpQ: {x: 0, y: 0, z: 0, w: 0}
+      lookDownQ: {x: 0, y: 0, z: 0, w: 0}
+      maxUpAngle: 0
+      maxDownAngle: 0
+      isLookUpSet: 0
+      isLookDownSet: 0
+    leftEyeballEyeRotationLimiter:
+      transform: {fileID: 0}
+      defaultQ: {x: 0, y: 0, z: 0, w: 0}
+      lookUpQ: {x: 0, y: 0, z: 0, w: 0}
+      lookDownQ: {x: 0, y: 0, z: 0, w: 0}
+      maxUpAngle: 0
+      maxDownAngle: 0
+      isLookUpSet: 0
+      isLookDownSet: 0
+    rightEyeballEyeRotationLimiter:
+      transform: {fileID: 0}
+      defaultQ: {x: 0, y: 0, z: 0, w: 0}
+      lookUpQ: {x: 0, y: 0, z: 0, w: 0}
+      lookDownQ: {x: 0, y: 0, z: 0, w: 0}
+      maxUpAngle: 0
+      maxDownAngle: 0
+      isLookUpSet: 0
+      isLookDownSet: 0
+    eyelidControl: 0
+    eyelidBoneMode: 0
+    eyelidsFollowEyesVertically: 0
+    upperEyeLidLeft: {fileID: 0}
+    upperEyeLidRight: {fileID: 0}
+    lowerEyeLidLeft: {fileID: 0}
+    lowerEyeLidRight: {fileID: 0}
+    isEyelidBonesDefaultSet: 0
+    isEyelidBonesClosedSet: 0
+    isEyelidBonesLookUpSet: 0
+    isEyelidBonesLookDownSet: 0
+    upperLeftLimiter:
+      transform: {fileID: 0}
+      defaultQ: {x: 0, y: 0, z: 0, w: 0}
+      closedQ: {x: 0, y: 0, z: 0, w: 0}
+      lookUpQ: {x: 0, y: 0, z: 0, w: 0}
+      lookDownQ: {x: 0, y: 0, z: 0, w: 0}
+      eyeMaxDownAngle: 0
+      eyeMaxUpAngle: 0
+      defaultPos: {x: 0, y: 0, z: 0}
+      closedPos: {x: 0, y: 0, z: 0}
+      lookUpPos: {x: 0, y: 0, z: 0}
+      lookDownPos: {x: 0, y: 0, z: 0}
+      isLookUpSet: 0
+      isLookDownSet: 0
+      isDefaultPosSet: 0
+      isClosedPosSet: 0
+      isLookUpPosSet: 0
+      isLookDownPosSet: 0
+    upperRightLimiter:
+      transform: {fileID: 0}
+      defaultQ: {x: 0, y: 0, z: 0, w: 0}
+      closedQ: {x: 0, y: 0, z: 0, w: 0}
+      lookUpQ: {x: 0, y: 0, z: 0, w: 0}
+      lookDownQ: {x: 0, y: 0, z: 0, w: 0}
+      eyeMaxDownAngle: 0
+      eyeMaxUpAngle: 0
+      defaultPos: {x: 0, y: 0, z: 0}
+      closedPos: {x: 0, y: 0, z: 0}
+      lookUpPos: {x: 0, y: 0, z: 0}
+      lookDownPos: {x: 0, y: 0, z: 0}
+      isLookUpSet: 0
+      isLookDownSet: 0
+      isDefaultPosSet: 0
+      isClosedPosSet: 0
+      isLookUpPosSet: 0
+      isLookDownPosSet: 0
+    lowerLeftLimiter:
+      transform: {fileID: 0}
+      defaultQ: {x: 0, y: 0, z: 0, w: 0}
+      closedQ: {x: 0, y: 0, z: 0, w: 0}
+      lookUpQ: {x: 0, y: 0, z: 0, w: 0}
+      lookDownQ: {x: 0, y: 0, z: 0, w: 0}
+      eyeMaxDownAngle: 0
+      eyeMaxUpAngle: 0
+      defaultPos: {x: 0, y: 0, z: 0}
+      closedPos: {x: 0, y: 0, z: 0}
+      lookUpPos: {x: 0, y: 0, z: 0}
+      lookDownPos: {x: 0, y: 0, z: 0}
+      isLookUpSet: 0
+      isLookDownSet: 0
+      isDefaultPosSet: 0
+      isClosedPosSet: 0
+      isLookUpPosSet: 0
+      isLookDownPosSet: 0
+    lowerRightLimiter:
+      transform: {fileID: 0}
+      defaultQ: {x: 0, y: 0, z: 0, w: 0}
+      closedQ: {x: 0, y: 0, z: 0, w: 0}
+      lookUpQ: {x: 0, y: 0, z: 0, w: 0}
+      lookDownQ: {x: 0, y: 0, z: 0, w: 0}
+      eyeMaxDownAngle: 0
+      eyeMaxUpAngle: 0
+      defaultPos: {x: 0, y: 0, z: 0}
+      closedPos: {x: 0, y: 0, z: 0}
+      lookUpPos: {x: 0, y: 0, z: 0}
+      lookDownPos: {x: 0, y: 0, z: 0}
+      isLookUpSet: 0
+      isLookDownSet: 0
+      isDefaultPosSet: 0
+      isClosedPosSet: 0
+      isLookUpPosSet: 0
+      isLookDownPosSet: 0
+    eyeWidenOrSquint: 0
+    blendshapesForBlinking: []
+    blendshapesForLookingUp: []
+    blendshapesForLookingDown: []
+    blendshapesConfigs: []
+    isEyelidBlendshapeDefaultSet: 0
+    isEyelidBlendshapeClosedSet: 0
+    isEyelidBlendshapeLookUpSet: 0
+    isEyelidBlendshapeLookDownSet: 0
+  kMinNextBlinkTime: 3
+  kMaxNextBlinkTime: 15
+  eyelidsFollowEyesVertically: 1
+  maxEyeHorizAngle: 35
+  maxEyeHorizAngleTowardsNose: 35
+  crossEyeCorrection: 1
+  nervousness: 0
+  limitHeadAngle: 0
 --- !u!4 &1089152280 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400004, guid: 1342aa655fd4a4014a5fe087319133f7, type: 3}
   m_PrefabInternal: {fileID: 1089152273}
+--- !u!114 &1089152281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1089152274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d5ab26285e294787a92bc8bba92c30a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsOfInterest: []
+  lookAtPlayerRatio: 0.1
+  stareBackFactor: 0
+  noticePlayerDistance: 0
+  personalSpaceDistance: 0
+  minLookTime: 3
+  maxLookTime: 10
+  playerEyeCenter: {fileID: 0}
+  keepTargetEvenWhenLost: 1
+  OnStartLookingAtPlayer:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStopLookingAtPlayer:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1096232938
 GameObject:
   m_ObjectHideFlags: 0
