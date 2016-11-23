@@ -4,4 +4,4 @@
 
 [submodule "Assets/RealisticEyeMovements"]
 	path = Assets/RealisticEyeMovements
-	url = git@github.com:cloudspace/elizavr-realisticeyemovements.github
+	url = git@github.com:cloudspace/elizavr-realisticeyemovements.git 
