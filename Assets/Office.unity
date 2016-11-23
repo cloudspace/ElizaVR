@@ -3127,11 +3127,11 @@ MonoBehaviour:
   actionInProgress: 0
   leanBack: 0
   leanForward: 0
-  sitStraight: 1
+  sitStraight: 0
   lookLeft: 0
   lookRight: 0
   lookUp: 0
-  lookDown: 0
+  lookDown: 1
   lookUpLeft: 0
   lookUpRight: 0
   lookDownLeft: 0
