@@ -51,10 +51,6 @@ public class CharacterHandler : MonoBehaviour {
 
 	public Transform lookPos;
 	public Transform eyePos;
-	public Transform leftHand;
-	public Transform rightHand;
-	public Transform leftElbow;
-	public Transform rightElbow;
 
 	private int actionCount;
 	private string bodyAction;
@@ -74,7 +70,7 @@ public class CharacterHandler : MonoBehaviour {
 		actionInProgress = false;
 		eyesMoved = false;
 
-		NotificationCenter.DefaultCenter ().AddObserver (this, "OnUserText");
+		Cloudspace.NotificationCenter.DefaultCenter ().AddObserver (this, "OnUserText");
 	}
 
 	// When listening is happening.
@@ -168,16 +164,8 @@ public class CharacterHandler : MonoBehaviour {
 	void OnAnimatorIK () {
 		anim.SetLookAtWeight (lookIKWeight, bodyWeight, headWeight, eyesWeight, clampWeight);
 		anim.SetLookAtPosition (lookPos.position);
-		anim.SetIKPositionWeight (AvatarIKGoal.LeftHand, 1f);
-		anim.SetIKPosition (AvatarIKGoal.LeftHand, leftHand.position);
-		anim.SetIKPositionWeight (AvatarIKGoal.RightHand, 1f);
-		anim.SetIKPosition (AvatarIKGoal.RightHand, rightHand.position);
-		anim.SetIKHintPositionWeight (AvatarIKHint.LeftElbow, 1f);
-		anim.SetIKHintPosition (AvatarIKHint.LeftElbow, leftElbow.position);
-		anim.SetIKHintPositionWeight (AvatarIKHint.RightElbow, 1f);
-		anim.SetIKHintPosition (AvatarIKHint.RightElbow, rightElbow.position);
 	}
-		
+
 	public void RunActions() {
 		CancelInvoke("RunActions");
 		ReturnEyesToIdle ();
@@ -221,7 +209,7 @@ public class CharacterHandler : MonoBehaviour {
 
 	public void ReturnEyesToIdle(){
 		eyesStraight = true;
-		eyePos.transform.position = new Vector3 (0.0f, -1.47f, -29.5f);
+		eyePos.transform.position = new Vector3 (-1.3f, 0.6f, -0.7f);
 	}
 
 	void LookTowards (Vector3 lookVector, int speedMulti) {
@@ -362,7 +350,7 @@ public class CharacterHandler : MonoBehaviour {
 		} else {
 			IncreaseHeadWeight ();
 			IncreaseBodyWeight ();
-			LookTowards (LeanBackVec(), 1);
+			LookTowards (LeanBackVec(), 3);
 		}
 	}
 
@@ -373,7 +361,7 @@ public class CharacterHandler : MonoBehaviour {
 		} else {
 			DecreaseHeadWeight ();
 			IncreaseBodyWeight ();
-			LookTowards (LeanForwardVec(), 1);
+			LookTowards (LeanForwardVec(), 2);
 		}
 	}
 
@@ -537,7 +525,7 @@ public class CharacterHandler : MonoBehaviour {
 			} else {
 				DecreaseBodyWeight ();
 				IncreaseHeadWeight ();
-				LookTowards (ShakeLeftVec(), 20);
+				LookTowards (ShakeLeftVec(), 10);
 			}
 		} else if(actionCount == 2) {
 			if (lookPos.transform.position == ShakeLeftVec()) {
@@ -545,7 +533,7 @@ public class CharacterHandler : MonoBehaviour {
 			} else {
 				DecreaseBodyWeight ();
 				IncreaseHeadWeight ();
-				LookTowards (ShakeLeftVec(), 20);
+				LookTowards (ShakeLeftVec(), 10);
 			}
 		} else if(actionCount == 3) {
 			if (lookPos.transform.position == LookStraightVec()) {
@@ -555,7 +543,7 @@ public class CharacterHandler : MonoBehaviour {
 			} else {
 				DecreaseBodyWeight ();
 				IncreaseHeadWeight ();
-				LookTowards (LookStraightVec(), 20);
+				LookTowards (LookStraightVec(), 10);
 			}
 		} else {
 			if (lookPos.transform.position == ShakeRightVec()) {
@@ -564,7 +552,7 @@ public class CharacterHandler : MonoBehaviour {
 			} else {
 				DecreaseBodyWeight ();
 				IncreaseHeadWeight ();
-				LookTowards (ShakeRightVec(), 20);
+				LookTowards (ShakeRightVec(), 10);
 			}
 		}
 		if (eyePos.transform.position == EyesStraightVec()) {
@@ -575,83 +563,83 @@ public class CharacterHandler : MonoBehaviour {
 	}
 
 	public Vector3 LookLeftVec() {
-		return new Vector3 (0.0f, 0.0f, -20.0f);
+		return new Vector3 (-1.3f, 1.6f, -3.0f);
 	}
 
 	public Vector3 LookRightVec() {
-		return new Vector3 (0.0f, 0.0f, -40.0f);
+		return new Vector3 (-4.0f, 1.6f, -0.7f);
 	}
 
 	public Vector3 LookUpVec() {
-		return new Vector3 (0.0f, 3.0f, -29.5f);
+		return new Vector3 (-1.3f, 4.0f, -0.7f);
 	}
 
 	public Vector3 LookDownVec() {
-		return new Vector3 (0.0f, -3.0f, -29.5f);
+		return new Vector3 (-1.3f, 0.0f, -0.7f);
 	}
 
 	public Vector3 LookUpLeftVec() {
-		return new Vector3 (0.0f, 4.0f, -20.0f);
+		return new Vector3 (1.3f, 4.0f, -3.0f);
 	}
 
 	public Vector3 LookUpRightVec() {
-		return new Vector3 (0.0f, 4.0f, -40.0f);
+		return new Vector3 (-4.0f, 4.0f, -0.7f);
 	}
 
 	public Vector3 LookDownLeftVec() {
-		return new Vector3 (0.0f, -3.0f, -20.0f);
+		return new Vector3 (1.3f, 0.0f, -3.0f);
 	}
 
 	public Vector3 LookDownRightVec() {
-		return new Vector3 (0.0f, -3.0f, -40.0f);
+		return new Vector3 (-4.0f, 0.0f, -0.7f);
 	}
 
 	public Vector3 LookStraightVec() {
-		return new Vector3 (0.0f, 0.0f, -29.5f);
+		return new Vector3 (-1.3f, 1.3f, -0.7f);
 	}
 
 	public Vector3 HeadBackVec() {
-		return new Vector3 (0.0f, 1.5f, -29.5f);
+		return new Vector3 (-1.3f, 3.0f, -0.7f);
 	}
 
 	public Vector3 HeadForwardVec() {
-		return new Vector3 (0.0f, -1.2f, -29.5f);
+		return new Vector3 (-1.3f, 1.6f, -0.7f);
 	}
 
 	public Vector3 NodVec() {
-		return new Vector3 (0.0f, -2.0f, -29.5f);
+		return new Vector3 (-1.3f, 0.5f, -0.7f);
 	}
 
 	public Vector3 ShakeLeftVec() {
-		return new Vector3 (0.0f, 0.0f, -27.0f);
+		return new Vector3 (-1.3f, 1.3f, -1.5f);
 	}
 
 	public Vector3 ShakeRightVec() {
-		return new Vector3 (0.0f, 0.0f, -31.0f);
+		return new Vector3 (-2.5f, 1.3f, -0.7f);
 	}
 
 	public Vector3 LeanBackVec() {
-		return new Vector3 (0.0f, 0.8f, -29.5f);
+		return new Vector3 (-1.3f, 4.0f, -0.7f);
 	}
 
 	public Vector3 LeanForwardVec() {
-		return new Vector3 (0.0f, -1.0f, -29.5f);
+		return new Vector3 (-1.3f, 0.0f, -0.7f);
 	}
 
 	public Vector3 EyesStraightVec() {
-		return new Vector3 (0.0f, -1.47f, -29.5f);
+		return new Vector3 (-1.3f, 0.6f, -0.7f);
 	}
 
 	public Vector3 EyesMouthVec() {
-		return new Vector3 (0.0f, -2.5f, -29.5f);
+		return new Vector3 (-1.3f, -1.0f, -0.7f);
 	}
 
 	public Vector3 EyesOverLeftVec() {
-		return new Vector3 (0.0f, -1.47f, -28.3f);
+		return new Vector3 (-1.3f, 0.6f, -2.0f);
 	}
 
 	public Vector3 EyesOverRightVec() {
-		return new Vector3 (0.0f, -1.47f, -31.3f);
+		return new Vector3 (-3.0f, 0.6f, -0.7f);
 	}
 
 	public void IncreaseBodyWeight(){
@@ -790,6 +778,5 @@ public class CharacterHandler : MonoBehaviour {
 		idle = true;
 		botTalking = false;
 	}
-}
-
+	}
 }
