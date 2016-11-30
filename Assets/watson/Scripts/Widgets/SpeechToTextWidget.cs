@@ -74,16 +74,7 @@ namespace IBM.Watson.DeveloperCloud.Widgets
 
 		public bool blocked = false;
 
-		public void OnStopListening(Notification notify) {
-			blocked = true;
-		}
-
-		public void OnStartListening(Notification notify) {
-			blocked = false;
-		}
-
         #region Public Properties
-
         /// <summary>
         /// This property starts or stop's this widget listening for speech.
         /// </summary>
@@ -130,17 +121,11 @@ namespace IBM.Watson.DeveloperCloud.Widgets
 			Active = !Active;
 	    }
 
-		protected override void Awake()
-		{
-			NotificationCenter.DefaultCenter ().AddObserver (this, "OnStartListening");
-			NotificationCenter.DefaultCenter ().AddObserver (this, "OnStopListening");
-		}
-
         /// <exclude />
         protected override void Start()
 	    {
             base.Start();
-			Active = true;
+
 	        if ( m_StatusText != null )
 	            m_StatusText.text = "READY";
             if (! m_SpeechToText.GetModels( OnGetModels ) )
@@ -210,11 +195,12 @@ namespace IBM.Watson.DeveloperCloud.Widgets
 	    private void OnRecognize(SpeechResultList result)
 	    {
           //  m_ResultOutput.SendData( new SpeechToTextData( result ) );
+			VoiceProcessor faceChanger = GetComponentInParent<VoiceProcessor> ();
 
 			string speechToText = new SpeechToTextData( result ).AllText;
 
 			if (!string.IsNullOrEmpty(speechToText)) {
-				Cloudspace.NotificationCenter.DefaultCenter ().PostNotification (this, "OnTextFromSpeech", speechToText);
+				faceChanger.GetDialog (speechToText);
 			}
 			Log.Debug("recognise", "result: {0}", new SpeechToTextData (result).Text);
 
