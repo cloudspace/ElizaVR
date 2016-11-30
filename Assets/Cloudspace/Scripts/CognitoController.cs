@@ -7,6 +7,7 @@ using Amazon.S3;
 using Cloudspace;
 using System.IO;
 using Amazon.S3.Model;
+using System.Collections.Generic;
 
 public class CognitoController : MonoBehaviour {
 	public AmazonS3Client s3Client;
@@ -33,8 +34,9 @@ public class CognitoController : MonoBehaviour {
 	}
 	
 	public void OnSaveDialog(Notification notification) {
-		String bot_transcript = ""; //notification.data;
-		String user_transcript = ""; //notification.data;
+		KeyValuePair<string, string> results = (KeyValuePair<string, string>)notification.data;
+		String bot_transcript = results.Value;
+		String user_transcript = results.Key;
 
 		DateTime today = System.DateTime.Now;
 		string key = today.ToString ("yyyy-MM-dd") + "/" + PlayerPrefs.GetString("guid") + ".txt";
