@@ -119,6 +119,7 @@ namespace Cloudspace
 		}
 
 		public void GetDialog (string response) {
+			NotificationCenter.DefaultCenter ().PostNotification (this, "OnStopUserSpeech");
 			System.DateTime starttime = System.DateTime.Now;
 
 			Debug.Log (System.DateTime.Now.ToString ("yyyy-MM-dd HH:mm:ss.fff") + " Bot Hears: " + response);
