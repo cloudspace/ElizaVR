@@ -619,11 +619,11 @@ public class CharacterHandler : MonoBehaviour {
 	}
 
 	public Vector3 LeanBackVec() {
-		return new Vector3 (-1.3f, 4.0f, -0.7f);
+		return new Vector3 (-1.3f, 2.0f, -0.7f);
 	}
 
 	public Vector3 LeanForwardVec() {
-		return new Vector3 (-1.3f, 0.0f, -0.7f);
+		return new Vector3 (-1.3f, 1.0f, -0.7f);
 	}
 
 	public Vector3 EyesStraightVec() {
