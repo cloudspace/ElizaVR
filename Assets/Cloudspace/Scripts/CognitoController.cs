@@ -35,8 +35,8 @@ public class CognitoController : MonoBehaviour {
 	
 	public void OnSaveDialog(Notification notification) {
 		KeyValuePair<string, string> results = (KeyValuePair<string, string>)notification.data;
-		String bot_transcript = results.Value; //notification.data;
-		String user_transcript = results.Key; //notification.data;
+		String bot_transcript = results.Value;
+		String user_transcript = results.Key;
 
 		DateTime today = System.DateTime.Now;
 		string key = today.ToString ("yyyy-MM-dd") + "/" + PlayerPrefs.GetString("guid") + ".txt";
