@@ -520,6 +520,34 @@ Light:
   m_BounceIntensity: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &96881629
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 96881630}
+  m_Layer: 0
+  m_Name: HeadPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &96881630
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 96881629}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.3, y: 1.6, z: -0.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
 --- !u!1 &314674998
 GameObject:
   m_ObjectHideFlags: 0
@@ -864,6 +892,34 @@ Light:
   m_BounceIntensity: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &691365255
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 691365256}
+  m_Layer: 0
+  m_Name: EyePos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &691365256
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 691365255}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.3, y: 0.6, z: -0.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
 --- !u!1 &709821406
 GameObject:
   m_ObjectHideFlags: 0
@@ -1242,31 +1298,31 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400004, guid: 1342aa655fd4a4014a5fe087319133f7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.372
+      value: -3.843
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 1342aa655fd4a4014a5fe087319133f7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.034
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 1342aa655fd4a4014a5fe087319133f7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.534
+      value: -3.018
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 1342aa655fd4a4014a5fe087319133f7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.008364599
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 1342aa655fd4a4014a5fe087319133f7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.38268343
+      value: 0.43377393
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 1342aa655fd4a4014a5fe087319133f7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.0029278663
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 1342aa655fd4a4014a5fe087319133f7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.92387956
+      value: 0.90097815
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 1342aa655fd4a4014a5fe087319133f7, type: 3}
       propertyPath: m_RootOrder
@@ -1274,19 +1330,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 1342aa655fd4a4014a5fe087319133f7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 45
+      value: 51.149002
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 1342aa655fd4a4014a5fe087319133f7, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.4
+      value: 1.425
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 1342aa655fd4a4014a5fe087319133f7, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.4
+      value: 1.425
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 1342aa655fd4a4014a5fe087319133f7, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.4
+      value: 1.425
       objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: 1342aa655fd4a4014a5fe087319133f7, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1300,6 +1356,18 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 1342aa655fd4a4014a5fe087319133f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.998
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 1342aa655fd4a4014a5fe087319133f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.11000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 1342aa655fd4a4014a5fe087319133f7, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: c32629cae38924d0582fa4d2758d997e, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1342aa655fd4a4014a5fe087319133f7, type: 3}
   m_IsPrefabParent: 0
@@ -1502,12 +1570,8 @@ MonoBehaviour:
   eyesOverRight: 0
   nodHead: 0
   shakeHead: 0
-  lookPos: {fileID: 0}
-  eyePos: {fileID: 0}
-  leftHand: {fileID: 0}
-  rightHand: {fileID: 0}
-  leftElbow: {fileID: 0}
-  rightElbow: {fileID: 0}
+  lookPos: {fileID: 96881630}
+  eyePos: {fileID: 691365256}
 --- !u!114 &1089152282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1519,25 +1583,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d5ab26285e294787a92bc8bba92c30a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsOfInterest: []
-  lookAtPlayerRatio: 0.1
-  stareBackFactor: 0
-  noticePlayerDistance: 0
-  personalSpaceDistance: 0
-  minLookTime: 3
-  maxLookTime: 10
-  playerEyeCenter: {fileID: 1730994245}
-  keepTargetEvenWhenLost: 1
-  OnStartLookingAtPlayer:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  OnStopLookingAtPlayer:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
 --- !u!114 &1089152283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1652,14 +1697,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!4 &1089152285 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 400082, guid: 1342aa655fd4a4014a5fe087319133f7, type: 3}
-  m_PrefabInternal: {fileID: 1089152273}
---- !u!4 &1089152286 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 400020, guid: 1342aa655fd4a4014a5fe087319133f7, type: 3}
-  m_PrefabInternal: {fileID: 1089152273}
 --- !u!114 &1089152287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1671,174 +1708,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0359b2b84d8484d2281221cfda5470e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  headSpeedModifier: 1
-  headWeight: 0.396
-  headBoneNonMecanimXform: {fileID: 0}
-  useMicroSaccades: 0
-  useMacroSaccades: 0
-  kDrawSightlinesInEditor: 0
-  controlData:
-    eyeControl: 2
-    leftEye: {fileID: 1089152286}
-    rightEye: {fileID: 1089152285}
-    maxEyeUpBoneAngle: 20
-    maxEyeDownBoneAngle: 20
-    maxEyeUpEyeballAngle: 20
-    maxEyeDownEyeballAngle: 20
-    isEyeBallDefaultSet: 1
-    isEyeBoneDefaultSet: 0
-    isEyeBallLookUpSet: 1
-    isEyeBoneLookUpSet: 0
-    isEyeBallLookDownSet: 1
-    isEyeBoneLookDownSet: 0
-    leftBoneEyeRotationLimiter:
-      transform: {fileID: 0}
-      defaultQ: {x: 0, y: 0, z: 0, w: 0}
-      lookUpQ: {x: 0, y: 0, z: 0, w: 0}
-      lookDownQ: {x: 0, y: 0, z: 0, w: 0}
-      maxUpAngle: 0
-      maxDownAngle: 0
-      isLookUpSet: 0
-      isLookDownSet: 0
-    rightBoneEyeRotationLimiter:
-      transform: {fileID: 0}
-      defaultQ: {x: 0, y: 0, z: 0, w: 0}
-      lookUpQ: {x: 0, y: 0, z: 0, w: 0}
-      lookDownQ: {x: 0, y: 0, z: 0, w: 0}
-      maxUpAngle: 0
-      maxDownAngle: 0
-      isLookUpSet: 0
-      isLookDownSet: 0
-    leftEyeballEyeRotationLimiter:
-      transform: {fileID: 1089152286}
-      defaultQ: {x: -2.4646135e-26, y: -2.1175824e-22, z: 4.7019774e-37, w: 1}
-      lookUpQ: {x: -0.13052621, y: 0, z: 0, w: 0.9914449}
-      lookDownQ: {x: 0.1437894, y: -3.017281e-10, z: 0.0000000039147827, w: 0.98960835}
-      maxUpAngle: 15
-      maxDownAngle: 16.534365
-      isLookUpSet: 1
-      isLookDownSet: 1
-    rightEyeballEyeRotationLimiter:
-      transform: {fileID: 1089152285}
-      defaultQ: {x: -2.4646135e-26, y: -2.1175824e-22, z: 4.7019774e-37, w: 1}
-      lookUpQ: {x: -0.13052621, y: 0, z: 0, w: 0.9914449}
-      lookDownQ: {x: 0.1437894, y: -3.017281e-10, z: 0.0000000039147827, w: 0.98960835}
-      maxUpAngle: 15
-      maxDownAngle: 16.534365
-      isLookUpSet: 1
-      isLookDownSet: 1
-    eyelidControl: 2
-    eyelidBoneMode: 0
-    eyelidsFollowEyesVertically: 0
-    upperEyeLidLeft: {fileID: 0}
-    upperEyeLidRight: {fileID: 0}
-    lowerEyeLidLeft: {fileID: 0}
-    lowerEyeLidRight: {fileID: 0}
-    isEyelidBonesDefaultSet: 0
-    isEyelidBonesClosedSet: 0
-    isEyelidBonesLookUpSet: 0
-    isEyelidBonesLookDownSet: 0
-    upperLeftLimiter:
-      transform: {fileID: 0}
-      defaultQ: {x: 0, y: 0, z: 0, w: 0}
-      closedQ: {x: 0, y: 0, z: 0, w: 0}
-      lookUpQ: {x: 0, y: 0, z: 0, w: 0}
-      lookDownQ: {x: 0, y: 0, z: 0, w: 0}
-      eyeMaxDownAngle: 0
-      eyeMaxUpAngle: 0
-      defaultPos: {x: 0, y: 0, z: 0}
-      closedPos: {x: 0, y: 0, z: 0}
-      lookUpPos: {x: 0, y: 0, z: 0}
-      lookDownPos: {x: 0, y: 0, z: 0}
-      isLookUpSet: 0
-      isLookDownSet: 0
-      isDefaultPosSet: 0
-      isClosedPosSet: 0
-      isLookUpPosSet: 0
-      isLookDownPosSet: 0
-    upperRightLimiter:
-      transform: {fileID: 0}
-      defaultQ: {x: 0, y: 0, z: 0, w: 0}
-      closedQ: {x: 0, y: 0, z: 0, w: 0}
-      lookUpQ: {x: 0, y: 0, z: 0, w: 0}
-      lookDownQ: {x: 0, y: 0, z: 0, w: 0}
-      eyeMaxDownAngle: 0
-      eyeMaxUpAngle: 0
-      defaultPos: {x: 0, y: 0, z: 0}
-      closedPos: {x: 0, y: 0, z: 0}
-      lookUpPos: {x: 0, y: 0, z: 0}
-      lookDownPos: {x: 0, y: 0, z: 0}
-      isLookUpSet: 0
-      isLookDownSet: 0
-      isDefaultPosSet: 0
-      isClosedPosSet: 0
-      isLookUpPosSet: 0
-      isLookDownPosSet: 0
-    lowerLeftLimiter:
-      transform: {fileID: 0}
-      defaultQ: {x: 0, y: 0, z: 0, w: 0}
-      closedQ: {x: 0, y: 0, z: 0, w: 0}
-      lookUpQ: {x: 0, y: 0, z: 0, w: 0}
-      lookDownQ: {x: 0, y: 0, z: 0, w: 0}
-      eyeMaxDownAngle: 0
-      eyeMaxUpAngle: 0
-      defaultPos: {x: 0, y: 0, z: 0}
-      closedPos: {x: 0, y: 0, z: 0}
-      lookUpPos: {x: 0, y: 0, z: 0}
-      lookDownPos: {x: 0, y: 0, z: 0}
-      isLookUpSet: 0
-      isLookDownSet: 0
-      isDefaultPosSet: 0
-      isClosedPosSet: 0
-      isLookUpPosSet: 0
-      isLookDownPosSet: 0
-    lowerRightLimiter:
-      transform: {fileID: 0}
-      defaultQ: {x: 0, y: 0, z: 0, w: 0}
-      closedQ: {x: 0, y: 0, z: 0, w: 0}
-      lookUpQ: {x: 0, y: 0, z: 0, w: 0}
-      lookDownQ: {x: 0, y: 0, z: 0, w: 0}
-      eyeMaxDownAngle: 0
-      eyeMaxUpAngle: 0
-      defaultPos: {x: 0, y: 0, z: 0}
-      closedPos: {x: 0, y: 0, z: 0}
-      lookUpPos: {x: 0, y: 0, z: 0}
-      lookDownPos: {x: 0, y: 0, z: 0}
-      isLookUpSet: 0
-      isLookDownSet: 0
-      isDefaultPosSet: 0
-      isClosedPosSet: 0
-      isLookUpPosSet: 0
-      isLookDownPosSet: 0
-    eyeWidenOrSquint: 0
-    blendshapesForBlinking:
-    - skinnedMeshRenderer: {fileID: 1089152279}
-      defaultWeight: 0
-      positionWeight: 100
-      index: 0
-      name: 
-      isUsedInEalierConfig: 0
-    - skinnedMeshRenderer: {fileID: 1089152279}
-      defaultWeight: 0
-      positionWeight: 100
-      index: 1
-      name: 
-      isUsedInEalierConfig: 0
-    blendshapesForLookingUp: []
-    blendshapesForLookingDown: []
-    blendshapesConfigs: []
-    isEyelidBlendshapeDefaultSet: 1
-    isEyelidBlendshapeClosedSet: 1
-    isEyelidBlendshapeLookUpSet: 1
-    isEyelidBlendshapeLookDownSet: 1
-  kMinNextBlinkTime: 3
-  kMaxNextBlinkTime: 5
-  eyelidsFollowEyesVertically: 1
-  maxEyeHorizAngle: 35
-  maxEyeHorizAngleTowardsNose: 35
-  crossEyeCorrection: 1
-  nervousness: 0
-  limitHeadAngle: 0
 --- !u!4 &1089152292 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400004, guid: 1342aa655fd4a4014a5fe087319133f7, type: 3}
@@ -2226,10 +2095,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
---- !u!4 &1730994245 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 400006, guid: b8b03d395f5734e98af91ccf44f9bf47, type: 2}
-  m_PrefabInternal: {fileID: 1249058722}
 --- !u!1 &1917073547
 GameObject:
   m_ObjectHideFlags: 0
