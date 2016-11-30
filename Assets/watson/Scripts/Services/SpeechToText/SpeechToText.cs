@@ -387,7 +387,9 @@ namespace IBM.Watson.DeveloperCloud.Services.SpeechToText.v1
 							if (newSpeech == true) {
 								newSpeech = false;
 								UnityEngine.Debug.Log ("--new: "+new SpeechToTextData (results).Text);
-							}
+                                Cloudspace.NotificationCenter.DefaultCenter ().PostNotification (null, "OnListeningToUser", 
+                                	new SpeechToTextData (results).Text);
+            				}
 							if (finalResults == null) {
 								finalResults = results;
 							} else {
