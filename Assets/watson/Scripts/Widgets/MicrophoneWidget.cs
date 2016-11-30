@@ -193,7 +193,7 @@ namespace IBM.Watson.DeveloperCloud.Widgets
             if (Failure && Active && !Disable
                 && (DateTime.Now - m_LastFailure).TotalMilliseconds > RETRY_INTERVAL)
             {
-                // try to restart the recording..
+				// try to restart the recording..
                 StartRecording();
             }
         }

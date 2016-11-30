@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+
 using System.Linq;
 using System.Text.RegularExpressions;
 using RiveScript;
@@ -30,7 +31,9 @@ namespace Cloudspace
 			return chatbot;
 		}
 
+		private CharacterHandler controller;
 		public void Start() {
+			controller = this.GetComponentInParent<CharacterHandler> ();
 		}
 
 		int startFrame = 0;
@@ -139,10 +142,12 @@ namespace Cloudspace
 			m_TextToSpeech.ToSpeech (text, t => StartCoroutine(PlayAudioClip(t)));
 		}
 
-
-
 		public IEnumerator PlayAudioClip(AudioClip clip) {
 			NotificationCenter.DefaultCenter ().PostNotification (this, "OnStopListening");
+
+			controller.RunBotTalkingActions ();
+			controller.RunActions ();
+
 			if (clip != null) {
 				source.spatialBlend = 0.0f;
 				source.loop = false;
