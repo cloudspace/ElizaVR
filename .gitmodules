@@ -2,6 +2,6 @@
 	path = Assets/Crazy Minnow Studio
 	url = git@github.com:cloudspace/SalsaWithRandomEyes.github
 
-[submodule "RealisticEyeMovements"]
+[submodule "Assets/RealisticEyeMovements"]
 	path = Assets/RealisticEyeMovements
-	url = git@github.com:cloudspace/elizavr-realisticeyemovements.git
+	url = git@github.com:cloudspace/elizavr-realisticeyemovements.git 
