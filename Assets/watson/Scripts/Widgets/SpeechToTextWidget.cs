@@ -74,6 +74,21 @@ namespace IBM.Watson.DeveloperCloud.Widgets
 
 		public bool blocked = false;
 
+        public void OnStopListening(Notification notify) {
+ 			blocked = true;
+ 		}
+ 
+ 		public void OnStartListening(Notification notify) {
+			blocked = false;
+ 		}
+
+   		protected override void Awake()
+ 		{
+            base.Awake();
+            NotificationCenter.DefaultCenter ().AddObserver (this, "OnStartListening");
+ 			NotificationCenter.DefaultCenter ().AddObserver (this, "OnStopListening");
+ 		}
+
         #region Public Properties
         /// <summary>
         /// This property starts or stop's this widget listening for speech.
@@ -166,7 +181,7 @@ namespace IBM.Watson.DeveloperCloud.Widgets
                 m_Language = language.Language;
 
                 if (! m_SpeechToText.GetModels( OnGetModels ) )
-                    Log.Error( "SpeechToTextWidget", "Failed to rquest models." );
+                    Log.Error( "SpeechToTextWidget", "Failed to request models." );
             }
         }
 
@@ -195,12 +210,10 @@ namespace IBM.Watson.DeveloperCloud.Widgets
 	    private void OnRecognize(SpeechResultList result)
 	    {
           //  m_ResultOutput.SendData( new SpeechToTextData( result ) );
-			VoiceProcessor faceChanger = GetComponentInParent<VoiceProcessor> ();
-
 			string speechToText = new SpeechToTextData( result ).AllText;
 
 			if (!string.IsNullOrEmpty(speechToText)) {
-				faceChanger.GetDialog (speechToText);
+                Cloudspace.NotificationCenter.DefaultCenter ().PostNotification (this, "OnTextFromSpeech", speechToText);
 			}
 			Log.Debug("recognise", "result: {0}", new SpeechToTextData (result).Text);
 
