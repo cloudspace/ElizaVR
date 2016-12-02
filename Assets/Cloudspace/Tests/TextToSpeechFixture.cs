@@ -3,14 +3,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using NUnit.Framework;
 
 namespace Cloudspace
 {
 	[IntegrationTest.DynamicTestAttribute("SpeechToText")]
 	[IntegrationTest.SucceedWithAssertions]
-    [TestFixture]
-    public class TestTextToSpeech : MonoBehaviour
+    public class TextToSpeechFixture : MonoBehaviour
     {
         NotificationCenter center = null;
         // Use this for initialization
@@ -21,19 +19,12 @@ namespace Cloudspace
             center.AddObserver(this, "OnStartListening");
             center.AddObserver(this, "OnTextFromSpeech");
             center.AddObserver(this, "OnSaveDialog");
-
-            StartCoroutine(TestAssertions());
         }
 
-        public IEnumerator TestAssertions() {
-            yield return new WaitForSeconds(3);
-
-            IntegrationTest.Assert(MessageCount("OnStopListening") == 2);
-            IntegrationTest.Assert(MessageCount("OnStartListening") == 2);
-            IntegrationTest.Assert(MessageCount("OnTextFromSpeech") == 1);
-            IntegrationTest.Assert(MessageCount("OnSaveDialog") == 2);
-        }
-
+        public int StopListeningCalled  { get { return MessageCount("OnStopListening"); } }
+        public int StartListeningCalled  { get { return MessageCount("OnStartListening"); } }
+        public int TextFromSpeechCalled { get { return MessageCount("OnTextFromSpeech"); } }
+        public int SaveDialogCalled { get { return MessageCount("OnSaveDialog"); } }
 
         public IEnumerator SaySomething()
         {
