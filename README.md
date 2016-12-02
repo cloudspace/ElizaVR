@@ -26,8 +26,12 @@ Used to cache a compiled copy of the rive script on the client's machine (for us
 
 ## Steps to build:
 
-1) Register for your service credentials, as described here: 
-https://github.com/watson-developer-cloud/unity-sdk#configuring-your-service-credentials
+1) Register for your service credentials, as described [by Watson's documentation](https://github.com/watson-developer-cloud/unity-sdk#configuring-your-service-credentials)
+
+The services we are using are "Speech to Text" and "Text$ to Speech", so create these two services as described by step #2 of "configuring your service credentials."
+
+Once you have created them, configure them within Unity by following step #3 - selecting the aforementioned services.
+This will create a configuration file at Assets/StreamingAssets/Config.json that will be used by Watson to keep track of your credentials.
 
 2) Install the "Realistic Eye Movements" plugin from the Unity Asset Store
 
