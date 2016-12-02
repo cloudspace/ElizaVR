@@ -8,6 +8,7 @@ namespace Cloudspace
 {
 	[IntegrationTest.DynamicTestAttribute("SpeechToText")]
 	[IntegrationTest.SucceedWithAssertions]
+    [IntegrationTest.TimeoutAttribute(10)]
     public class TextToSpeechFixture : MonoBehaviour
     {
         NotificationCenter center = null;
@@ -19,6 +20,8 @@ namespace Cloudspace
             center.AddObserver(this, "OnStartListening");
             center.AddObserver(this, "OnTextFromSpeech");
             center.AddObserver(this, "OnSaveDialog");
+
+            StartCoroutine(SaySomething());
         }
 
         public int StopListeningCalled  { get { return MessageCount("OnStopListening"); } }

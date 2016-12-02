@@ -5,8 +5,8 @@ using System.Text;
 using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEngine;
-using UnityTest.IntegrationTestRunner;
 using UnityEngine.SceneManagement;
+using UnityTest.IntegrationTestRunner;
 
 namespace UnityTest
 {
