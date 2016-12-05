@@ -31,8 +31,19 @@ namespace Cloudspace
 
         public IEnumerator SaySomething()
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(3);
             center.PostNotification(this, "OnTextFromSpeech", "Hello");
+            yield return new WaitForSeconds(4);
+
+            if(StopListeningCalled == 2 &&
+               StartListeningCalled == 2 &&
+               TextFromSpeechCalled == 1 &&
+               SaveDialogCalled == 2
+            )
+                IntegrationTest.Pass(gameObject);
+            else
+                IntegrationTest.Fail(gameObject);
+
         }
 
 
@@ -45,7 +56,8 @@ namespace Cloudspace
 
         public void AddMessage(Notification notification, string method)
         {
-            Messages.Add(new KeyValuePair<string, string>(method, notification.data.ToString()));
+            var data = notification.data == null ? null : notification.data.ToString();
+            Messages.Add(new KeyValuePair<string, string>(method, data));
         } 
 
 		public void OnTextFromSpeech(Notification notice) {
