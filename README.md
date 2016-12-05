@@ -28,30 +28,22 @@ Used to cache a compiled copy of the rive script on the client's machine (for us
 
 1. If you do not have a bluemix account (at http://bluemix.net), go and create one.
 
-2. If you have configured the Text to Speech and Speech services already, go to step 3.  Otherwise, complete the following steps
+2. Complete the following steps to configure speech-to-text and text-to-speech. 
     1. Log in to Bluemix at https://bluemix.net.
     2. Navigate to the **Dashboard** on your Bluemix account.
-    3. Click the **tile** for Speech to Text.
+    3. Click the "Create Service" button.
+    3. Click the **tile** for Speech to Text, and then click "Create."  You should be picking from that list from [here](https://console.ng.bluemix.net/catalog/?category=watson&taxonomyNavigation=watson).
     4. Click **Service Credentials**. Note: If your browser window is too narrow, the service options may be collapsed. Click on the upward facing double arrow next to "Back to Dashboard..." on the upper left to expand the sidebar.
+    The [Watson dashboard](https://console.ng.bluemix.net/dashboard/watson) is available under Watson, and should list the Watson parameters.
     5. Copy the content in the **Service Credentials** field, and paste it in the credentials field in the Config Editor (**Watson -> Config Editor**) in Unity.
     6. Click **Apply Credentials**.
-    7. Repeat steps 1 - 5 for Text to Speech.
+    7. Repeat steps 1 - 6 for Text to Speech.
 
-3. If you need to configure the services that you want to use, complete the following steps.
-    1. In the Config Editor (**Watson -> Config Editor**), click the **Configure** button beside the service to register. The service window is displayed.
-    2. Under **Add Service**, type a unique name for the service instance in the Service name field. For example, type 'speech-to-text'. Leave the default values for the other options.
-    3. Click **Create**.
-    4. Click **Service Credentials**. Note: If your browser window is too narrow, the service options may be collapsed. Click on the upward facing double arrow next to "Back to Dashboard..." on the upper left to expand the sidebar.
-    5. Copy the content in the **Service Credentials** field, and paste it in the empty credentials field in the **Config Editor** in Unity.
-    6. Click **Apply Credentials**.
-    7. Repeat steps 1 - 5 for Text to Speech.
-
-Once you have created them, configure them within Unity by following step #3 - selecting the aforementioned services.
 This will create a configuration file at Assets/StreamingAssets/Config.json that will be used by Watson to keep track of your credentials.
 
 4. Install the "Realistic Eye Movements" plugin from the Unity Asset Store
 
-5. Install the "Salsa Text-to-Speech" plugin from the Asset Store.
+5. Install the "Salsa Text-to-Speech" plugin from the Unity Asset Store.
 
 6. There are two cameras in the app - one for building Cardboard builds named "Cardboard" and one named "Gear" for the GearVR build.  In the Unity Inspector, show the camera that matches the build output you wish to build for, and deactivate the other.  Make sure that only one camera is active at a time.
 
