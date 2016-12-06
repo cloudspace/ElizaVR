@@ -48,3 +48,15 @@ This will create a configuration file at Assets/StreamingAssets/Config.json that
 6. There are two cameras in the app - one for building Cardboard builds named "Cardboard" and one named "Gear" for the GearVR build.  In the Unity Inspector, show the camera that matches the build output you wish to build for, and deactivate the other.  Make sure that only one camera is active at a time.
 
 7.  If you wish to build for Gear VR, make sure that "Virtual Reality Support" is checked under the Player Settings.  If not, make sure that it is not checked.
+
+## Building for GearVR
+
+1.  Deactivate the "Cardboard" game object and activate the "Gear" game object.There
+
+2.  Sign the app:
+    1. Locate the Publishing Settings under PlayerSettings
+    2. Create a new keystore by selecting a keystore name and password (confirm the password)
+    3. Select "Create a new key" under Key Alias
+    4. A new window opens; enter the necessary information.
+    5. Select the newly created key.
+    6. Build ( Run); your app is now signed.
