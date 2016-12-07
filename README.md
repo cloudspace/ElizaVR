@@ -54,9 +54,9 @@ This will create a configuration file at Assets/StreamingAssets/Config.json that
 1.  Deactivate the "Cardboard" game object and activate the "Gear" game object.There
 
 2.  Sign the app:
-    1. Locate the Publishing Settings under PlayerSettings
+    1. Locate the Publishing Settings under PlayerSettings.  If you do not see this player setting, make sure that you have first installed the Android settings.
     2. Create a new keystore by selecting a keystore name and password (confirm the password)
     3. Select "Create a new key" under Key Alias
     4. A new window opens; enter the necessary information.
     5. Select the newly created key.
-    6. Build ( Run); your app is now signed.
+    6. Build (Run); your app is now signed.
