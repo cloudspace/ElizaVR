@@ -47,16 +47,19 @@ This will create a configuration file at Assets/StreamingAssets/Config.json that
 
 6. There are two cameras in the app - one for building Cardboard builds named "Cardboard" and one named "Gear" for the GearVR build.  In the Unity Inspector, show the camera that matches the build output you wish to build for, and deactivate the other.  Make sure that only one camera is active at a time.
 
-7.  If you wish to build for Gear VR, make sure that "Virtual Reality Support" is checked under the Player Settings.  If not, make sure that it is not checked.
-
 ## Building for GearVR
 
-1.  Deactivate the "Cardboard" game object and activate the "Gear" game object.There
-
-2.  Sign the app:
+1.  Sign the app:
     1. Locate the Publishing Settings under PlayerSettings.  If you do not see this player setting, make sure that you have first installed the Android settings.
     2. Create a new keystore by selecting a keystore name and password (confirm the password)
     3. Select "Create a new key" under Key Alias
     4. A new window opens; enter the necessary information.
     5. Select the newly created key.
     6. Build (Run); your app is now signed.
+
+2.  Create an osig file for your gear VR by building one for your specific device at the [oculus website](https://developer.oculus.com/osig/).  Copy the created signature file to Assets/Plugins/Android/assets
+3.  Deactivate the "Cardboard" game object and activate the "Gear" game object.
+4.  Set the build to "Virtual Reality Supported" under player settings.
+5.  Use the build tool to build (File=>Build Settings).
+
+Steps #3-#4 can also happen automatically simply by using the Cloudspace menu (Cloudspace -> Build Gear), but it will not work unless it is signed and has a signature file.
