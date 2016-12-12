@@ -145,9 +145,6 @@ namespace Cloudspace
 		public IEnumerator PlayAudioClip(AudioClip clip) {
 			NotificationCenter.DefaultCenter ().PostNotification (this, "OnStopListening");
 
-			controller.RunBotTalkingActions ();
-			controller.RunActions ();
-
 			if (clip != null) {
 				source.spatialBlend = 0.0f;
 				source.loop = false;
