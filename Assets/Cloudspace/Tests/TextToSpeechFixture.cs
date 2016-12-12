@@ -3,12 +3,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 namespace Cloudspace
 {
 	[IntegrationTest.DynamicTestAttribute("SpeechToText")]
 	[IntegrationTest.SucceedWithAssertions]
-    [IntegrationTest.TimeoutAttribute(10)]
+    [IntegrationTest.TimeoutAttribute(20)]
     public class TextToSpeechFixture : MonoBehaviour
     {
         NotificationCenter center = null;
@@ -16,6 +17,7 @@ namespace Cloudspace
         void Start()
         {
             center = NotificationCenter.DefaultCenter();
+            SceneManager.LoadScene("Office", LoadSceneMode.Additive);
             center.AddObserver(this, "OnStopListening");
             center.AddObserver(this, "OnStartListening");
             center.AddObserver(this, "OnTextFromSpeech");
@@ -31,7 +33,7 @@ namespace Cloudspace
 
         public IEnumerator SaySomething()
         {
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(5);
             center.PostNotification(this, "OnTextFromSpeech", "Hello");
             yield return new WaitForSeconds(4);
 
