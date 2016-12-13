@@ -139,7 +139,7 @@ public class OVRCameraRig : MonoBehaviour
 	private void UpdateAnchors()
 	{
 		bool monoscopic = OVRManager.instance.monoscopic;
-
+		if(OVRManager.tracker != null) {	
 		OVRPose tracker = OVRManager.tracker.GetPose();
 
 		trackerAnchor.localRotation = tracker.orientation;
@@ -155,7 +155,7 @@ public class OVRCameraRig : MonoBehaviour
 		rightEyeAnchor.localPosition = monoscopic ? centerEyeAnchor.localPosition : VR.InputTracking.GetLocalPosition(VR.VRNode.RightEye);
         leftHandAnchor.localPosition = OVRInput.GetLocalControllerPosition(OVRInput.Controller.LTouch);
         rightHandAnchor.localPosition = OVRInput.GetLocalControllerPosition(OVRInput.Controller.RTouch);
-
+		}
 		if (UpdatedAnchors != null)
 		{
 			UpdatedAnchors(this);
